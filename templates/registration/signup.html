@@ -1,0 +1,19 @@
+<!-- templates/signup.html -->
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+<div class="col-7 offset-2 mb-7 mt-7">
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+
+</div>
+</br>
+
+{% endblock %}

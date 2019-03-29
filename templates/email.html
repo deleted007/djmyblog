@@ -1,0 +1,21 @@
+<!-- templates/email.html -->
+
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<h1>Contact Us</h1>
+<div class="col-7 offset-2 mb-7 mt-7">
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+</div>
+</br>
+{% endblock content %}
+
